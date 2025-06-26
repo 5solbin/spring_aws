@@ -5,7 +5,6 @@ import lombok.Builder;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import solbin.book.springboot_aws.domain.BaseTimeEntity;
-import solbin.book.springboot_aws.web.dto.PostsSaveRequestDto;
 
 @NoArgsConstructor
 @Entity

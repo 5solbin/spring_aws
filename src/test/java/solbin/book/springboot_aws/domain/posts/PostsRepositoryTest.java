@@ -1,12 +1,11 @@
 package solbin.book.springboot_aws.domain.posts;
 
-import org.aspectj.lang.annotation.After;
 import org.assertj.core.api.Assertions;
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.springframework.test.annotation.Rollback;
 import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import java.time.LocalDateTime;
@@ -19,7 +18,7 @@ class PostsRepositoryTest {
     @Autowired
     PostsRepository postsRepository;
 
-    @After("aa")
+    @AfterEach
     public void cleanup() {
         postsRepository.deleteAll();
     }
