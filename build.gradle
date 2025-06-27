@@ -7,11 +7,11 @@ plugins {
 group = 'solbin.book'
 version = '0.0.1-SNAPSHOT'
 
-//java {
-//    toolchain {
-//        languageVersion = JavaLanguageVersion.of(17)
-//    }
-//}
+java {
+    toolchain {
+        languageVersion = JavaLanguageVersion.of(17)
+    }
+}
 
 repositories {
     mavenCentral()
@@ -31,6 +31,7 @@ dependencies {
     implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
     implementation 'org.springframework.session:spring-session-jdbc'
     testImplementation 'org.springframework.security:spring-security-test'
+    implementation "org.mariadb.jdbc:mariadb-java-client"
 }
 
 tasks.named('test') {
